@@ -38,7 +38,7 @@ task("newDay") {
                 """    println("Hello World!")""",
                 "}",
                 ""
-            ),
+            ).joinToString("\n").toByteArray(),
             StandardOpenOption.CREATE
         )
         Files.createDirectories(rootPath.resolve("$newDay/src/main/resources"))
